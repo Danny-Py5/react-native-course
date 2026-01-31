@@ -1,13 +1,13 @@
-import { ScreenContent } from 'components/ScreenContent';
-import { StatusBar } from 'expo-status-bar';
-
+import Navigation from 'Navigation';
 import './global.css';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-export default function App() {
+const App = () => {
   return (
-    <>
-      <ScreenContent title="Home" path="App.tsx"></ScreenContent>
-      <StatusBar style="auto" />
-    </>
+    <SafeAreaProvider>
+      <Navigation />
+    </SafeAreaProvider>
   );
-}
+};
+
+export default App;
