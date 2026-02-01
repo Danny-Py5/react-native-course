@@ -7,7 +7,7 @@ import { cardData, recentlyBookedData } from '../../data/productData';
 
 const Dashboard = ({ navigation }: any) => {
   return (
-    <SafeAreaView className="h-full bg-white pt-10" edges={[]}>
+    <SafeAreaView className="h-full bg-white pt-10" edges={['bottom']}>
       <ScrollView className="flex-1">
         <View className="flex w-full flex-row items-center justify-between  px-5">
           <View className="h-12 w-12 items-center justify-center rounded-full bg-green-500 ">
