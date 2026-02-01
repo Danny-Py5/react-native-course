@@ -16,13 +16,24 @@ type Props = {
 const ProductDetails = ({ route }: Props) => {
   console.log(route.params);
 
+  const getRandomKey = () => {
+    const string = 'abcdefghijklmnopqrstuvwxyz1234567890_-';
+    let key = '';
+    for (let i = 0; i < 10; i++) {
+      key += string.charAt(Math.floor(Math.random() * string.length));
+    }
+    return key;
+  };
+
   const getReviewStar = (star: number) => {
     let starArr = [];
     for (let i = 0; i <= Math.floor(star); i++) {
       starArr.push(<MaterialIcons key={i} name="star" size={15} color="#d99400" />);
     }
     if (Math.ceil(star) !== Math.floor(star)) {
-      starArr.push(<MaterialIcons name="star-half" size={15} color="#d99400" />);
+      starArr.push(
+        <MaterialIcons key={getRandomKey()} name="star-half" size={15} color="#d99400" />
+      );
     }
     return starArr;
   };
@@ -36,7 +47,9 @@ const ProductDetails = ({ route }: Props) => {
             <Text className={` ${styles.title} `}>{route.params.title}</Text>
             <Text className={styles.text}>{route.params.subtitle}</Text>
           </View>
-          <View className="h-[400] w-full flex-1 ">
+          <View
+            style={{ boxShadow: '0 10px 30px #99999994' }}
+            className="h-[400] w-full flex-1 rounded-3xl ">
             <Image
               source={route.params.image}
               className="h-full w-full rounded-3xl object-cover"
@@ -55,7 +68,7 @@ const ProductDetails = ({ route }: Props) => {
                 <Text className="text-5xl font-bold text-green-700">{route.params.rate}</Text>
               </View>
               <View>
-                <Text className={styles.textDark}>{String(route.params.reviewCount)} reviews</Text>
+                <Text className={styles.textBold}>{String(route.params.reviewCount)} reviews</Text>
                 <Text className={`${styles.text} self-center`}>Highly rated by guests</Text>
               </View>
             </View>
@@ -69,9 +82,11 @@ const ProductDetails = ({ route }: Props) => {
               {route.params.whatThisPlaceOffers.map((offer, index) => {
                 return (
                   <View key={index + offer.title} className=" flex-row items-center gap-6 ">
-                    <View>{<MaterialIcons name={offer.materialIconName} size={40} />}</View>
                     <View>
-                      <Text className={styles.textDark}>{offer.title}</Text>
+                      {<MaterialIcons color={'#004400'} name={offer.materialIconName} size={30} />}
+                    </View>
+                    <View>
+                      <Text className={styles.textBold}>{offer.title}</Text>
                       <Text className={styles.text}>{offer.description}</Text>
                     </View>
                   </View>
