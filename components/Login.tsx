@@ -46,7 +46,7 @@ export default function Login({ navigation }: any) {
                   routes: [{ name: 'Dashboard' }],
                 });
               }}
-              className="mt-6 w-4/5 rounded-xl bg-gray-900 py-3">
+              className="mt-6 w-4/5 rounded-xl bg-green-600 py-3">
               <Text className="text-center font-bold text-white">Login</Text>
             </Pressable>
           </View>

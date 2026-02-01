@@ -8,4 +8,5 @@ export const styles = {
   textDark: 'text-2xl font-bold text-dark',
   textBold: 'text-lg font-bold',
   textSmall: 'text-sm text-gray-500',
+  onboardingTitle: 'text-5xl font-bold',
 };
