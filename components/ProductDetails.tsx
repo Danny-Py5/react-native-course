@@ -27,7 +27,7 @@ const ProductDetails = ({ route }: Props) => {
 
   const getReviewStar = (star: number) => {
     let starArr = [];
-    for (let i = 0; i <= Math.floor(star); i++) {
+    for (let i = 0; i < Math.floor(star); i++) {
       starArr.push(<MaterialIcons key={i} name="star" size={15} color="#d99400" />);
     }
     if (Math.ceil(star) !== Math.floor(star)) {
