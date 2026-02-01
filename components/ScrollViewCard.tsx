@@ -5,6 +5,12 @@ import type { RootStackParamList } from 'Navigation';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { styles } from './styles/styles';
 
+type WhatThisPlaceOffers = {
+  title: string;
+  description: string;
+  materialIconName: string;
+};
+
 export type ProductCardDataType = {
   id: number;
   title: string;
@@ -14,6 +20,7 @@ export type ProductCardDataType = {
   rate: string;
   reviews: number;
   description: string;
+  whatThisPlaceOffers: WhatThisPlaceOffers[];
 };
 
 type ProductDetailsScreenNavigationProp = NativeStackNavigationProp<

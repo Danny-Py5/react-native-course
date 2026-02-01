@@ -3,90 +3,9 @@ import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Feather } from '@expo/vector-icons';
 import ScrollViewCard from 'components/ScrollViewCard';
+import { cardData, recentlyBookedData } from '../../data/productData';
 
 const Dashboard = ({ navigation }: any) => {
-  const cardData = [
-    {
-      id: 1,
-      image: require('../../assets/OIP.webp'),
-      title: 'Emerolda De Hotel',
-      subtitle: 'Ports Comfort',
-      price: '29',
-      rate: '5.7',
-      reviews: 124,
-      description:
-        'Experience unparalleled luxury in this breathtaking beachfront villa. Nestled on pristine white sand beaches with crystal-clear turquoise waters, this exclusive property offers the perfect escape for those seeking ultimate tranquility and sophistication.',
-    },
-    {
-      id: 2,
-      image: require('../../assets/img2.webp'),
-      title: 'Grand Royale',
-      subtitle: 'Correct Comfort',
-      price: '89',
-      rate: '4.9',
-      reviews: 124,
-      description:
-        'Experience unparalleled luxury in this breathtaking beachfront villa. Nestled on pristine white sand beaches with crystal-clear turquoise waters, this exclusive property offers the perfect escape for those seeking ultimate tranquility and sophistication.',
-    },
-    {
-      id: 3,
-      image: require('../../assets/img3.webp'),
-      title: 'Sea View Resort',
-      subtitle: 'Ocean Comfort',
-      price: '100',
-      rate: '4.3',
-      reviews: 124,
-      description:
-        'Indulge in ultimate luxury in this expansive suite, complete with a separate living area, premium furnishings, and panoramic city or ocean views. Perfect for VIP guests.',
-    },
-    {
-      id: 4,
-      image: require('../../assets/img4.webp'),
-      title: 'Ocean Breeze',
-      subtitle: 'Coastal Comfort',
-      price: '120',
-      rate: '4.7',
-      reviews: 124,
-      description:
-        'Enjoy a blend of elegance and coziness in this deluxe double room. Equipped with twin beds, ambient lighting, and contemporary amenities for a restful stay.',
-    },
-  ];
-  const recentlyBookedData = [
-    {
-      id: 1,
-      image: require('../../assets/img5.jpg'),
-      title: 'Mountain Retreat',
-      subtitle: 'Hilltop Comfort',
-      price: '150',
-      rate: '5.7',
-      reviews: 124,
-      description:
-        'Experience unparalleled luxury in this breathtaking beachfront villa. Nestled on pristine white sand beaches with crystal-clear turquoise waters, this exclusive property offers the perfect escape for those seeking ultimate tranquility and sophistication.',
-    },
-    {
-      id: 2,
-      image: require('../../assets/img6.webp'),
-      title: 'Desert Oasis',
-      subtitle: 'Sandy Comfort',
-      price: '200',
-      rate: '4.6',
-      reviews: 124,
-      description:
-        'Wake up to breathtaking sea views in this spacious suite. Featuring modern décor, a plush king-size bed, and a private balcony, it’s perfect for a luxurious coastal escape.',
-    },
-
-    {
-      id: 3,
-      image: require('../../assets/img7.webp'),
-      title: 'Forest Hideaway',
-      subtitle: 'Woodland Comfort',
-      price: '180',
-      rate: '4.9',
-      reviews: 124,
-      description:
-        'Designed for comfort and style, this executive room offers a king-size bed, sleek furnishings, and a work desk. Ideal for business travelers seeking relaxation after a busy day.',
-    },
-  ];
   return (
     <SafeAreaView className="h-full bg-white pt-5">
       <ScrollView className="flex-1">
