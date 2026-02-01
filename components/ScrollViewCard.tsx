@@ -1,14 +1,23 @@
 import { View, Text, ScrollView, ImageBackground, Pressable } from 'react-native';
-import { Feather } from '@expo/vector-icons';
+import { Feather, MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import type { RootStackParamList } from 'Navigation';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { styles } from './styles/styles';
+import React from 'react';
 
 type WhatThisPlaceOffers = {
   title: string;
   description: string;
-  materialIconName: string;
+  materialIconName: React.ComponentProps<typeof MaterialIcons>['name'];
+};
+
+type ReviewsTypes = {
+  reviewer: string;
+  date: string;
+  shortDescription: string;
+  description: string;
+  star?: number;
 };
 
 export type ProductCardDataType = {
@@ -18,7 +27,8 @@ export type ProductCardDataType = {
   subtitle: string;
   price: string;
   rate: string;
-  reviews: number;
+  reviewCount: number;
+  reviews: ReviewsTypes[];
   description: string;
   whatThisPlaceOffers: WhatThisPlaceOffers[];
 };

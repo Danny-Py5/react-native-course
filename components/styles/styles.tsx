@@ -6,4 +6,6 @@ export const styles = {
   textDimOnBlack: 'text-white/70 text-lg ',
   text: 'text-lg  text-gray-500',
   textDark: 'text-2xl font-bold text-dark',
+  textBold: 'text-lg font-bold',
+  textSmall: 'text-sm text-gray-500',
 };
