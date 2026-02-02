@@ -1,14 +1,14 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Onboarding from 'components/Onboarding';
-import Setting from 'components/Setting';
-import Login from 'components/Login';
-import Dashboard from 'components/pages/Dashboard';
-import ProductDetails from 'components/ProductDetails';
+import Onboarding from './screens/Onboarding';
+import Setting from './screens/Setting';
+import Login from './screens/Login';
+import Dashboard from './screens/Dashboard';
+import ProductDetails from './screens/ProductDetails';
 import type { ProductCardDataType } from 'components/ScrollViewCard';
-import Onboarding2 from 'components/onboarding/Onboarding2';
-import Onboarding3 from 'components/onboarding/Onboarding3';
-import Onboarding4 from 'components/onboarding/Onboarding4';
+import Onboarding2 from './screens/onboarding/Onboarding2';
+import Onboarding3 from './screens/onboarding/Onboarding3';
+import Onboarding4 from './screens/onboarding/Onboarding4';
 
 export type RootStackParamList = {
   Onboarding: undefined;

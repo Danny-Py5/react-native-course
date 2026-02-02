@@ -3,7 +3,7 @@ import { Feather, MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import type { RootStackParamList } from 'Navigation';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { styles } from './styles/styles';
+import { styles } from '../styles/styles';
 import React from 'react';
 
 type WhatThisPlaceOffers = {
@@ -21,7 +21,7 @@ type ReviewsTypes = {
 };
 
 export type ProductCardDataType = {
-  id: number;
+  id: string;
   title: string;
   image: any;
   subtitle: string;
@@ -30,6 +30,7 @@ export type ProductCardDataType = {
   reviewCount: number;
   reviews: ReviewsTypes[];
   description: string;
+  category: string;
   whatThisPlaceOffers: WhatThisPlaceOffers[];
 };
 

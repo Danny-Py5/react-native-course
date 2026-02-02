@@ -3,12 +3,12 @@ import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from '../styles/styles';
 
-const Onboarding3 = ({ navigation }: any) => {
+const Onboarding = ({ navigation }: any) => {
   return (
     <SafeAreaView className="flex-1" edges={[]}>
       <View className="flex-1 ">
         <ImageBackground
-          source={require('../../assets/recommended2.webp')}
+          source={require('../assets/reg2.webp')}
           className="item-center h-full w-full flex-1 justify-center object-cover">
           <View
             style={{ backgroundColor: '#000000c4' }}
@@ -16,16 +16,16 @@ const Onboarding3 = ({ navigation }: any) => {
             <Text
               style={{ color: 'white', textAlign: 'center' }}
               className={styles.onboardingTitle}>
-              Fast and Secure Booking
+              Find Your Perfect Stay
             </Text>
             <Text
               style={{ color: 'rgb(175, 175, 175)' }}
               className=" font-gray-200 mt-10 text-center text-2xl ">
-              Book rooms instantly with secure and reliable payment
+              Book comfortable and affordable hotels anywhere, anytime
             </Text>
             <Pressable
               onPress={() => {
-                navigation.navigate('Onboarding4');
+                navigation.navigate('Onboarding2');
               }}
               className="mt-10 flex w-3/5 items-center justify-center rounded-2xl bg-green-700 py-4">
               <Text className="text-lg font-bold text-white">Next</Text>
@@ -37,4 +37,4 @@ const Onboarding3 = ({ navigation }: any) => {
   );
 };
 
-export default Onboarding3;
+export default Onboarding;

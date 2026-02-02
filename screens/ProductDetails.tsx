@@ -3,9 +3,10 @@ import React from 'react';
 import { RootStackParamList } from 'Navigation';
 import { RouteProp } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { styles } from './styles/styles';
+import { styles } from '../styles/styles';
 import { MaterialIcons } from '@expo/vector-icons';
-import { HR } from './HR';
+import { HR } from '../components/HR';
+import { getRandomKey } from 'util/getAKey';
 
 type RegisterScreenRouteProp = RouteProp<RootStackParamList, 'ProductDetails'>;
 
@@ -14,16 +15,7 @@ type Props = {
 };
 
 const ProductDetails = ({ route }: Props) => {
-  console.log(route.params);
-
-  const getRandomKey = () => {
-    const string = 'abcdefghijklmnopqrstuvwxyz1234567890_-';
-    let key = '';
-    for (let i = 0; i < 10; i++) {
-      key += string.charAt(Math.floor(Math.random() * string.length));
-    }
-    return key;
-  };
+  // console.log(route.params);
 
   const getReviewStar = (star: number) => {
     let starArr = [];
@@ -39,7 +31,7 @@ const ProductDetails = ({ route }: Props) => {
   };
 
   return (
-    <SafeAreaView>
+    <SafeAreaView edges={['bottom']}>
       <ScrollView className="bg-white">
         {/* parent container */}
         <View className="flex-1 gap-10 p-4">
@@ -52,7 +44,7 @@ const ProductDetails = ({ route }: Props) => {
             className="h-[400] w-full flex-1 rounded-3xl ">
             <Image
               source={route.params.image}
-              className="h-full w-full rounded-3xl object-cover"
+              className="h-full w-full rounded-3xl object-cover "
               resizeMode="cover"
             />
           </View>

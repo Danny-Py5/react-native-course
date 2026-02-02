@@ -1,14 +1,14 @@
 import { View, Text, Pressable, ImageBackground } from 'react-native';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { styles } from './styles/styles';
+import { styles } from '../../styles/styles';
 
-const Onboarding = ({ navigation }: any) => {
+const Onboarding3 = ({ navigation }: any) => {
   return (
     <SafeAreaView className="flex-1" edges={[]}>
       <View className="flex-1 ">
         <ImageBackground
-          source={require('../assets/reg2.webp')}
+          source={require('../../assets/recommended2.webp')}
           className="item-center h-full w-full flex-1 justify-center object-cover">
           <View
             style={{ backgroundColor: '#000000c4' }}
@@ -16,16 +16,16 @@ const Onboarding = ({ navigation }: any) => {
             <Text
               style={{ color: 'white', textAlign: 'center' }}
               className={styles.onboardingTitle}>
-              Find Your Perfect Stay
+              Fast and Secure Booking
             </Text>
             <Text
               style={{ color: 'rgb(175, 175, 175)' }}
               className=" font-gray-200 mt-10 text-center text-2xl ">
-              Book comfortable and affordable hotels anywhere, anytime
+              Book rooms instantly with secure and reliable payment
             </Text>
             <Pressable
               onPress={() => {
-                navigation.navigate('Onboarding2');
+                navigation.navigate('Onboarding4');
               }}
               className="mt-10 flex w-3/5 items-center justify-center rounded-2xl bg-green-700 py-4">
               <Text className="text-lg font-bold text-white">Next</Text>
@@ -37,4 +37,4 @@ const Onboarding = ({ navigation }: any) => {
   );
 };
 
-export default Onboarding;
+export default Onboarding3;
