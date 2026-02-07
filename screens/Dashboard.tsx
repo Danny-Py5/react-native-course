@@ -52,9 +52,9 @@ const Dashboard = ({ navigation }: any) => {
   return (
     <SafeAreaView className="h-full bg-white " edges={['bottom', 'top']}>
       <ScrollView className="flex-1 ">
-        <View className="flex w-full flex-row items-center justify-between  px-5">
+        <View className="flex w-full flex-row items-center justify-between px-5  pt-5">
           <View className="h-12 w-12 items-center justify-center rounded-full bg-green-500 ">
-            <Feather name="award" size={24} color="white" />
+            <Feather name="user-check" size={24} color="white" />
           </View>
           <View className=" flex-row items-center gap-4 rounded-full bg-gray-200 px-5 py-2">
             <Pressable onPress={() => navigation.navigate('Notification')}>
