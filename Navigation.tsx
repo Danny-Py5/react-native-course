@@ -47,6 +47,7 @@ export default function Navigation() {
             headerTitleStyle: {
               fontWeight: 'bold',
             },
+            headerBackVisible: false,
           }}
         />
         <stack.Screen name="Search" component={Search} options={{ headerShown: false }} />
