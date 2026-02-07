@@ -10,6 +10,7 @@ import Onboarding2 from './screens/onboarding/Onboarding2';
 import Onboarding3 from './screens/onboarding/Onboarding3';
 import Onboarding4 from './screens/onboarding/Onboarding4';
 import Search from 'screens/Search';
+import Notification from 'screens/Notification';
 
 export type RootStackParamList = {
   Onboarding: undefined;
@@ -19,6 +20,7 @@ export type RootStackParamList = {
   Onboarding2: undefined;
   Onboarding3: undefined;
   Onboarding4: undefined;
+  Notification: undefined;
   ProductDetails: ProductCardDataType;
   Search: undefined;
 };
@@ -34,6 +36,7 @@ export default function Navigation() {
         <stack.Screen name="Onboarding3" component={Onboarding3} />
         <stack.Screen name="Onboarding4" component={Onboarding4} />
         <stack.Screen name="Setting" component={Setting} />
+        <stack.Screen name="Notification" component={Notification} />
         <stack.Screen name="Search" component={Search} options={{ headerShown: false }} />
         <stack.Screen name="Login" component={Login} />
         <stack.Screen name="Dashboard" component={Dashboard} options={{ headerShown: false }} />

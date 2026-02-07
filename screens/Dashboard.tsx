@@ -57,7 +57,9 @@ const Dashboard = ({ navigation }: any) => {
             <Feather name="award" size={24} color="white" />
           </View>
           <View className=" flex-row items-center gap-4 rounded-full bg-gray-200 px-5 py-2">
-            <Feather name="bell" size={24} color="black" />
+            <Pressable onPress={() => navigation.navigate('Notification')}>
+              <Feather name="bell" size={24} color="black" />
+            </Pressable>
             <Pressable onPress={() => navigation.navigate('Search')}>
               <Feather name="search" size={24} color="black" />
             </Pressable>

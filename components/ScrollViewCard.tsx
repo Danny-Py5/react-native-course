@@ -49,7 +49,7 @@ const ScrollViewCard = ({
   const navigation = useNavigation<ProductDetailsScreenNavigationProp>();
   return (
     <FlatList
-      // key={searching ? 'grid' : 'list'}
+      // key={searching ? 'grid' : 'list'}j
       horizontal={!searching}
       numColumns={searching ? 2 : 1}
       showsHorizontalScrollIndicator={false}
@@ -102,7 +102,7 @@ const ScrollViewCard = ({
       }}
       ListEmptyComponent={
         searching ? (
-          <Text className={`${styles.text} mt-10 text-center`}>Data Not found</Text>
+          <Text className={`${styles.text} mt-10 text-center`}>No result found</Text>
         ) : null
       }
     />
