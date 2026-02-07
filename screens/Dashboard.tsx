@@ -39,7 +39,7 @@ const Dashboard = ({ navigation }: any) => {
       'Recently Booked': recentlyBookedData,
     };
     if (matchingData[item]) {
-      const array = matchingData[item];
+      const array = [...matchingData[item]];
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
         [array[i], array[j]] = [array[j], array[i]]; // swap elements
@@ -50,19 +50,23 @@ const Dashboard = ({ navigation }: any) => {
     }
   };
   return (
-    <SafeAreaView className="h-full bg-white pt-10" edges={['bottom']}>
-      <ScrollView className="flex-1">
+    <SafeAreaView className="h-full bg-white " edges={['bottom', 'top']}>
+      <ScrollView className="flex-1 ">
         <View className="flex w-full flex-row items-center justify-between  px-5">
           <View className="h-12 w-12 items-center justify-center rounded-full bg-green-500 ">
             <Feather name="award" size={24} color="white" />
           </View>
-          <View>
+          <View className=" flex-row items-center gap-4 rounded-full bg-gray-200 px-5 py-2">
             <Feather name="bell" size={24} color="black" />
+            <Pressable onPress={() => navigation.navigate('Search')}>
+              <Feather name="search" size={24} color="black" />
+            </Pressable>
           </View>
         </View>
         <View className="flex h-full flex-1 gap-4 p-5">
-          <Text className={styles.title}>Hello Daniel 👋</Text>
-          <TextInput className={styles.searchInput} placeholder="Search." />
+          <Text style={{ marginTop: 5, marginVertical: 20 }} className={styles.title}>
+            Hello Daniel 👋
+          </Text>
 
           <View className="relative flex  h-[50px] items-center justify-center">
             <ScrollView
@@ -88,12 +92,14 @@ const Dashboard = ({ navigation }: any) => {
             </ScrollView>
           </View>
           {/* CARDS */}
-          {ScrollViewCard(productToDisplay)}
+          <ScrollViewCard productsData={productToDisplay} />
           {/* RECENTLY ADDED */}
           <View className="mt-4">
-            <Text className={styles.titleSmall}>Recently Booked</Text>
+            <Text style={{ marginTop: 20, marginVertical: 10 }} className={styles.titleSmall}>
+              Recently Booked
+            </Text>
 
-            {ScrollViewCard(recentlyBookedData)}
+            <ScrollViewCard productsData={recentlyBookedData} />
           </View>
         </View>
       </ScrollView>
