@@ -11,6 +11,7 @@ import Onboarding3 from './screens/onboarding/Onboarding3';
 import Onboarding4 from './screens/onboarding/Onboarding4';
 import Search from 'screens/Search';
 import Notification from 'screens/Notification';
+import { Pressable, Text, Alert } from 'react-native';
 
 export type RootStackParamList = {
   Onboarding: undefined;
@@ -48,6 +49,16 @@ export default function Navigation() {
               fontWeight: 'bold',
             },
             headerBackVisible: false,
+            headerRight: () => {
+              return (
+                <Pressable
+                  onPress={() => {
+                    Alert.alert('Back', 'Are you sure you want to go back?');
+                  }}>
+                  <Text className="text-white">Back</Text>
+                </Pressable>
+              );
+            },
           }}
         />
         <stack.Screen name="Search" component={Search} options={{ headerShown: false }} />
