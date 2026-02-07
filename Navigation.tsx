@@ -36,7 +36,19 @@ export default function Navigation() {
         <stack.Screen name="Onboarding3" component={Onboarding3} />
         <stack.Screen name="Onboarding4" component={Onboarding4} />
         <stack.Screen name="Setting" component={Setting} />
-        <stack.Screen name="Notification" component={Notification} />
+        <stack.Screen
+          name="Notification"
+          component={Notification}
+          options={{
+            headerStyle: {
+              backgroundColor: 'black',
+            },
+            headerTintColor: 'white',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
         <stack.Screen name="Search" component={Search} options={{ headerShown: false }} />
         <stack.Screen name="Login" component={Login} />
         <stack.Screen name="Dashboard" component={Dashboard} options={{ headerShown: false }} />
